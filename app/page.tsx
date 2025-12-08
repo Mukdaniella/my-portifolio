@@ -6,7 +6,7 @@ import Footer from './components/Footer';
 function Home() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 via-emerald-50 to-teal-100 dark:from-zinc-950 dark:via-emerald-950 dark:to-teal-950">
-      <Navbar />
+      <Navbar activePage="home" />
       <section className="min-h-screen flex items-center px-6 pt-20">
         <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center">
           <div className="order-2 md:order-1 space-y-6">

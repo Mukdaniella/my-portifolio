@@ -4,7 +4,7 @@ import Footer from '../components/Footer';
 function Contact() {
   return (
     <div className="min-h-screen bg-white dark:bg-zinc-950">
-      <Navbar />
+      <Navbar activePage="contact" />
       <section className="py-20 px-6 pt-32 min-h-screen">
         <div className="max-w-2xl mx-auto text-center">
           <h2 className="text-4xl font-bold mb-8">Get In Touch</h2>

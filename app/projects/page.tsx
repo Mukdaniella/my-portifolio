@@ -4,7 +4,7 @@ import Footer from '../components/Footer';
 function Projects() {
   return (
     <div className="min-h-screen bg-white dark:bg-zinc-950">
-      <Navbar />
+      <Navbar activePage="projects" />
       <section className="py-20 px-6 pt-32 bg-zinc-50 dark:bg-zinc-900 min-h-screen">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-4xl font-bold mb-12">Projects</h2>
