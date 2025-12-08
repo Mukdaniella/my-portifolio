@@ -6,6 +6,7 @@ function Navbar() {
       <div className="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
         <Link href="/" className="text-xl font-bold">Portfolio</Link>
         <div className="flex gap-6">
+          <Link href="/" className="hover:text-blue-600 transition">Home</Link>
           <Link href="/about" className="hover:text-blue-600 transition">About</Link>
           <Link href="/skills" className="hover:text-blue-600 transition">Skills</Link>
           <Link href="/projects" className="hover:text-blue-600 transition">Projects</Link>
