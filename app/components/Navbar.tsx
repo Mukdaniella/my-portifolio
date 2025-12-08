@@ -16,7 +16,7 @@ function Navbar({ activePage = '' }: { activePage?: string }) {
           Portfolio
         </Link>
         <div className="flex gap-8">
-          {links.map((link) => {
+          {links.filter(link => link.label !== 'Skills').map((link) => {
             const isActive = activePage === link.label.toLowerCase();
             return (
               <Link
