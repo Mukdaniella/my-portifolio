@@ -10,8 +10,8 @@ function Contact() {
         </svg>
       ),
       title: 'Email',
-      value: 'mukobwajana@gmail.com',
-      link: 'mailto:mukobwajana@gmail.com',
+      value: 'mugabodaniella22@gmail.com',
+      link: 'mailto:mugabodaniella22@gmail.com',
     },
     {
       icon: (
