@@ -17,8 +17,8 @@ function About() {
   const experience = [
     {
       title: 'Frontend Developer',
-      company: 'Freelance',
-      period: '2023 - Present',
+      company: 'IGIRE Rwanda',
+      period: '2025 - Present',
       description: 'Building responsive web applications and user interfaces for various clients.',
       achievements: ['Delivered 10+ projects', 'Maintained 100% client satisfaction', 'Specialized in React & Next.js'],
     },
@@ -27,7 +27,7 @@ function About() {
       company: 'Projects',
       period: '2022 - Present',
       description: 'Designing intuitive and beautiful user experiences for web applications.',
-      achievements: ['Created 15+ design systems', 'Improved user engagement by 40%', 'Focused on accessibility'],
+      achievements: ['Created 2+ design systems', 'Improved user engagement by 40%', 'Focused on accessibility'],
     },
   ];
 
@@ -96,7 +96,7 @@ function About() {
                 <h2 className="text-xl sm:text-2xl font-bold mb-4 sm:mb-6 text-zinc-900 dark:text-white">Stats</h2>
                 <div className="grid grid-cols-3 lg:grid-cols-1 gap-4 sm:gap-6">
                   <div className="text-center lg:text-left">
-                    <p className="text-3xl sm:text-4xl font-bold bg-gradient-to-r from-emerald-600 to-teal-600 bg-clip-text text-transparent mb-1">2+</p>
+                    <p className="text-3xl sm:text-4xl font-bold bg-gradient-to-r from-emerald-600 to-teal-600 bg-clip-text text-transparent mb-1">1+</p>
                     <p className="text-xs sm:text-sm text-zinc-600 dark:text-zinc-400">Years Experience</p>
                   </div>
                   <div className="text-center lg:text-left">
@@ -121,6 +121,7 @@ function About() {
                   ))}
                 </div>
               </div>
+
             </div>
           </div>
 

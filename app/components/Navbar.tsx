@@ -21,7 +21,7 @@ function Navbar({ activePage = '' }: { activePage?: string }) {
         </Link>
         
         {/* Desktop Menu */}
-        <div className="hidden md:flex gap-8">
+        <div className="hidden md:flex gap-8 items-center">
           {links.filter(link => link.label !== 'Skills').map((link) => {
             const isActive = activePage === link.label.toLowerCase();
             return (
@@ -43,6 +43,9 @@ function Navbar({ activePage = '' }: { activePage?: string }) {
               </Link>
             );
           })}
+          <a href="/cv/Daniella_Resume.pdf" download className="px-4 py-2 bg-gradient-to-r from-emerald-600 to-teal-600 text-white rounded-lg hover:shadow-lg transition-all font-medium text-sm">
+            Resume
+          </a>
         </div>
 
         {/* Mobile Menu Button */}
@@ -84,6 +87,9 @@ function Navbar({ activePage = '' }: { activePage?: string }) {
                 </Link>
               );
             })}
+            <a href="/cv/Daniella-Mugabo-CV.pdf" download onClick={() => setIsOpen(false)} className="block py-2 px-4 bg-gradient-to-r from-emerald-600 to-teal-600 text-white rounded-lg font-medium text-center">
+              Download Resume
+            </a>
           </div>
         </div>
       )}

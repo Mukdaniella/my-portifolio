@@ -59,73 +59,79 @@ function Contact() {
             </p>
           </div>
 
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
-            {contactMethods.map((method, index) => (
-              <a
-                key={index}
-                href={method.link}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="group bg-white/70 dark:bg-zinc-900/70 backdrop-blur-sm rounded-2xl p-8 shadow-lg border border-emerald-200/50 dark:border-emerald-800/50 hover:shadow-2xl hover:border-emerald-400 dark:hover:border-emerald-600 transition-all text-center"
-              >
-                <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-emerald-500 to-teal-600 rounded-full text-white mb-4 group-hover:scale-110 transition-transform">
-                  {method.icon}
-                </div>
-                <h3 className="text-lg font-bold text-zinc-900 dark:text-white mb-2">{method.title}</h3>
-                <p className="text-xs text-zinc-600 dark:text-zinc-400 break-words overflow-wrap-anywhere">{method.value}</p>
-              </a>
-            ))}
-          </div>
+          <div className="grid lg:grid-cols-2 gap-12 items-start">
+            {/* Contact Cards - Left Side */}
+            <div className="flex flex-col justify-center">
+              <div className="grid sm:grid-cols-2 gap-6">
+                {contactMethods.map((method, index) => (
+                  <a
+                    key={index}
+                    href={method.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="group bg-white/70 dark:bg-zinc-900/70 backdrop-blur-sm rounded-2xl p-6 shadow-lg border border-emerald-200/50 dark:border-emerald-800/50 hover:shadow-2xl hover:border-emerald-400 dark:hover:border-emerald-600 transition-all text-center"
+                  >
+                    <div className="inline-flex items-center justify-center w-14 h-14 bg-gradient-to-br from-emerald-500 to-teal-600 rounded-full text-white mb-4 group-hover:scale-110 transition-transform">
+                      {method.icon}
+                    </div>
+                    <h3 className="text-lg font-bold text-zinc-900 dark:text-white mb-2">{method.title}</h3>
+                    <p className="text-sm text-zinc-600 dark:text-zinc-400 break-words">{method.value}</p>
+                  </a>
+                ))}
+              </div>
+            </div>
 
-          <div className="bg-white/70 dark:bg-zinc-900/70 backdrop-blur-sm rounded-2xl p-8 shadow-lg border border-emerald-200/50 dark:border-emerald-800/50">
-            <h3 className="text-2xl font-bold mb-6 text-zinc-900 dark:text-white">Send me a message</h3>
-            <form action="https://formsubmit.co/mugabodaniella22@gmail.com" method="POST" className="space-y-6">
-              <input type="hidden" name="_subject" value="New Portfolio Contact Message" />
-              <input type="hidden" name="_captcha" value="false" />
-              <input type="hidden" name="_next" value="https://your-portfolio-url.com/contact?success=true" />
-              
-              <div className="grid md:grid-cols-2 gap-6">
-                <div>
-                  <label className="block text-sm font-medium text-zinc-700 dark:text-zinc-300 mb-2">Name</label>
-                  <input
-                    type="text"
-                    name="name"
-                    required
-                    className="w-full px-4 py-3 rounded-xl bg-white dark:bg-zinc-800 border border-emerald-200 dark:border-emerald-800 focus:border-emerald-500 focus:ring-2 focus:ring-emerald-500/20 outline-none transition"
-                    placeholder="Your name"
-                  />
+            {/* Contact Form - Right Side */}
+            <div className="bg-white/70 dark:bg-zinc-900/70 backdrop-blur-sm rounded-2xl p-8 shadow-lg border border-emerald-200/50 dark:border-emerald-800/50">
+              <h3 className="text-2xl font-bold mb-6 text-zinc-900 dark:text-white">Send me a message</h3>
+              <form action="https://formsubmit.co/mugabodaniella22@gmail.com" method="POST" className="space-y-6">
+                <input type="hidden" name="_subject" value="New Portfolio Contact Message" />
+                <input type="hidden" name="_captcha" value="false" />
+                <input type="hidden" name="_next" value="https://your-portfolio-url.com/contact?success=true" />
+                
+                <div className="grid gap-6">
+                  <div>
+                    <label className="block text-sm font-medium text-zinc-700 dark:text-zinc-300 mb-2">Name</label>
+                    <input
+                      type="text"
+                      name="name"
+                      required
+                      className="w-full px-4 py-3 rounded-xl bg-white dark:bg-zinc-800 border border-emerald-200 dark:border-emerald-800 focus:border-emerald-500 focus:ring-2 focus:ring-emerald-500/20 outline-none transition"
+                      placeholder="Your name"
+                    />
+                  </div>
+                  <div>
+                    <label className="block text-sm font-medium text-zinc-700 dark:text-zinc-300 mb-2">Email</label>
+                    <input
+                      type="email"
+                      name="email"
+                      required
+                      className="w-full px-4 py-3 rounded-xl bg-white dark:bg-zinc-800 border border-emerald-200 dark:border-emerald-800 focus:border-emerald-500 focus:ring-2 focus:ring-emerald-500/20 outline-none transition"
+                      placeholder="your.email@example.com"
+                    />
+                  </div>
                 </div>
                 <div>
-                  <label className="block text-sm font-medium text-zinc-700 dark:text-zinc-300 mb-2">Email</label>
-                  <input
-                    type="email"
-                    name="email"
+                  <label className="block text-sm font-medium text-zinc-700 dark:text-zinc-300 mb-2">Message</label>
+                  <textarea
+                    name="message"
+                    rows={6}
                     required
-                    className="w-full px-4 py-3 rounded-xl bg-white dark:bg-zinc-800 border border-emerald-200 dark:border-emerald-800 focus:border-emerald-500 focus:ring-2 focus:ring-emerald-500/20 outline-none transition"
-                    placeholder="your.email@example.com"
-                  />
+                    className="w-full px-4 py-3 rounded-xl bg-white dark:bg-zinc-800 border border-emerald-200 dark:border-emerald-800 focus:border-emerald-500 focus:ring-2 focus:ring-emerald-500/20 outline-none transition resize-none"
+                    placeholder="Your message..."
+                  ></textarea>
                 </div>
-              </div>
-              <div>
-                <label className="block text-sm font-medium text-zinc-700 dark:text-zinc-300 mb-2">Message</label>
-                <textarea
-                  name="message"
-                  rows={6}
-                  required
-                  className="w-full px-4 py-3 rounded-xl bg-white dark:bg-zinc-800 border border-emerald-200 dark:border-emerald-800 focus:border-emerald-500 focus:ring-2 focus:ring-emerald-500/20 outline-none transition resize-none"
-                  placeholder="Your message..."
-                ></textarea>
-              </div>
-              <button
-                type="submit"
-                className="w-full md:w-auto px-8 py-4 bg-gradient-to-r from-emerald-600 to-teal-600 text-white rounded-xl hover:shadow-xl hover:shadow-emerald-500/25 transition-all font-medium flex items-center justify-center gap-2 group"
-              >
-                Send Message
-                <svg className="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
-                </svg>
-              </button>
-            </form>
+                <button
+                  type="submit"
+                  className="w-full px-8 py-4 bg-gradient-to-r from-emerald-600 to-teal-600 text-white rounded-xl hover:shadow-xl hover:shadow-emerald-500/25 transition-all font-medium flex items-center justify-center gap-2 group"
+                >
+                  Send Message
+                  <svg className="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                  </svg>
+                </button>
+              </form>
+            </div>
           </div>
         </div>
       </section>
